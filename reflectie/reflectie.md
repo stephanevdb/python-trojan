@@ -1,5 +1,7 @@
 # Reflectie
 #### Stéphane Van den Broeck
+https://github.com/stephanevdb/python-trojan
+https://github.com/stephanevdb/python-trojan-modules
 ## Modules
 - sys-info
 - network-scanner
